@@ -1,0 +1,45 @@
+<section class="list-box">
+    <div class="top-bar">
+        <h2>Lista de Conteúdos</h2>
+        <a routerLink="/admin/form" class="btn">Novo</a>
+    </div>
+    @if(sucessMessage){
+    <div class="success-message">
+        {{ sucessMessage }}
+    </div>
+    }
+    @if(errorMessage){
+    <div class="error-message">
+        {{ errorMessage }}
+    </div>
+    }
+
+    @if (loading) {
+    <div class="loading">
+        <p>Carregando conteúdos...</p>
+    </div>
+    }
+    @if(!loading && conteudos.length === 0){
+    <div class="empty-state">
+        <p>Nenhum conteúdo encontrado.</p>
+    </div>
+    }
+
+    <div class="conteudo-grid">
+        @for(conteudo of conteudos; track conteudo.id){
+        <div class="conteudo-item">
+            <h3>{{ conteudo.titulo }}</h3>
+            <p>{{ conteudo.descricao }}</p>
+            <p>{{ conteudo.preco }}</p>
+            <div class="actions">
+                <button type="button" class="btn-edit" (click)="edit(conteudo.id)">
+                    Editar
+                </button>
+                <button type="button" class="btn-delete" (click)="remove(conteudo.id)">
+                    Excluir
+                </button>
+            </div>
+        </div>
+        }
+    </div>
+</section>

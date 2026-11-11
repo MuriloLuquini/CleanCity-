@@ -1,0 +1,111 @@
+<div class="form-box">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <div class="field">
+            <label for="categoria">Categoria</label>
+            <input id="categoria" type="text" formControlName="categoria" />
+            <span class="character-count">
+                {{ form.controls.categoria.value.length }} caracteres
+            </span>
+
+            @if (form.controls.categoria.touched &&
+            form.controls.categoria.invalid) {
+                <small>Informe uma categoria com no minimo 3 caracteres</small>
+            }
+        </div>
+    </form>
+
+</div>
+        <div class="field">
+            <label for="categoria">Categoria</label>
+            <input id="categoria" type="text" formControlName="categoria" />
+            <span class="character-count">
+                {{ form.controls.categoria.value.length }} caracteres
+            </span>
+
+            @if (form.controls.categoria.touched &&
+            form.controls.categoria.invalid) {
+                <small>Informe uma categoria com no minimo 3 caracteres</small>
+            }
+        </div>
+                <div class="field">
+            <label for="categoria">Categoria</label>
+            <input id="categoria" type="text" formControlName="categoria" />
+            <span class="character-count">
+                {{ form.controls.categoria.value.length }} caracteres
+            </span>
+
+            @if (form.controls.categoria.touched &&
+            form.controls.categoria.invalid) {
+                <small>Informe uma categoria com no minimo 3 caracteres</small>
+            }
+        </div>
+                <div class="field">
+            <label for="categoria">Categoria</label>
+            <input id="categoria" type="text" formControlName="categoria" />
+            <span class="character-count">
+                {{ form.controls.categoria.value.length }} caracteres
+            </span>
+
+            @if (form.controls.categoria.touched &&
+            form.controls.categoria.invalid) {
+                <small>Informe uma categoria com no minimo 3 caracteres</small>
+            }
+        </div>        <div class="field">
+            <label for="categoria">Categoria</label>
+            <input id="categoria" type="text" formControlName="categoria" />
+            <span class="character-count">
+                {{ form.controls.categoria.value.length }} caracteres
+            </span>
+
+            @if (form.controls.categoria.touched &&
+            form.controls.categoria.invalid) {
+                <small>Informe uma categoria com no minimo 3 caracteres</small>
+            }
+        </div>        <div class="field">
+            <label for="categoria">Categoria</label>
+            <input id="categoria" type="text" formControlName="categoria" />
+            <span class="character-count">
+                {{ form.controls.categoria.value.length }} caracteres
+            </span>
+
+            @if (form.controls.categoria.touched &&
+            form.controls.categoria.invalid) {
+                <small>Informe uma categoria com no minimo 3 caracteres</small>
+            }
+        </div>        <div class="field">
+            <label for="categoria">Categoria</label>
+            <input id="categoria" type="text" formControlName="categoria" />
+            <span class="character-count">
+                {{ form.controls.categoria.value.length }} caracteres
+            </span>
+
+            @if (form.controls.categoria.touched &&
+            form.controls.categoria.invalid) {
+                <small>Informe uma categoria com no minimo 3 caracteres</small>
+            }
+        </div>        <div class="field">
+            <label for="categoria">Categoria</label>
+            <input id="categoria" type="text" formControlName="categoria" />
+            <span class="character-count">
+                {{ form.controls.categoria.value.length }} caracteres
+            </span>
+
+            @if (form.controls.categoria.touched &&
+            form.controls.categoria.invalid) {
+                <small>Informe uma categoria com no minimo 3 caracteres</small>
+            }
+        </div>
+
+        <form>
+
+            <button type="submit" [disabled]="loading || loadingData">
+                @if (loading) {
+                    Salvando...
+                } @else if(editingId) !== null) {
+                    Atualizar
+                } @else {
+                    Salvar
+                }
+
+            </button>
+        </form>
